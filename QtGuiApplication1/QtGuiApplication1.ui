@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtGuiApplication1Class</class>
+ <widget class="QMainWindow" name="QtGuiApplication1Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>719</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtGuiApplication1</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(48, 118, 172)</string>
+   </property>
+   <widget class="QPushButton" name="hotButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>240</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/hot.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="starButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>240</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/star.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>0</y>
+      <width>960</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1000</width>
+       <height>10000</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1000</width>
+       <height>10000</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="wechatButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>240</y>
+      <width>240</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 120, 215);
+font: 12pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>微信公众号追踪</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="githubButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>240</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 120, 215);
+font: 12pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>GitHub更新追踪</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="weiboButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>400</y>
+      <width>240</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 120, 215);
+font: 12pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>微博用户更新</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>240</y>
+      <width>240</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/search.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>weiboButton</zorder>
+   <zorder>githubButton</zorder>
+   <zorder>wechatButton</zorder>
+   <zorder>hotButton</zorder>
+   <zorder>starButton</zorder>
+   <zorder>searchButton</zorder>
+   <zorder>scrollArea</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="QtGuiApplication1.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGuiApplication1Class</receiver>
+   <slot>searchClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>button()</slot>
+  <slot>searchClicked()</slot>
+ </slots>
+</ui>

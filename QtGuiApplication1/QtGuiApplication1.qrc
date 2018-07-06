@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>Resources/search.png</file>
+        <file>Resources/hot.png</file>
+        <file>Resources/star.png</file>
+        <file>Resources/logo.png</file>
+        <file>Resources/netMusicHot.png</file>
+    </qresource>
+</RCC>

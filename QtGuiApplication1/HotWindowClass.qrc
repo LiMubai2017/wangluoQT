@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>Resources/netMusicHot.png</file>
+        <file>Resources/hotTitle.png</file>
+        <file>Resources/searchTitle.png</file>
+        <file>Resources/starTitle.png</file>
+        <file>Resources/netMusicNew.png</file>
+        <file>Resources/baidu.png</file>
+        <file>Resources/tieba.png</file>
+        <file>Resources/weibo.png</file>
+        <file>Resources/netMusicUp.png</file>
+    </qresource>
+</RCC>
