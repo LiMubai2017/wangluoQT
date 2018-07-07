@@ -31,6 +31,30 @@ HotWindowClass::HotWindowClass(QWidget *parent)
 	RankList *list6 = new RankList(this);
 	ui.weiboLayout->addWidget(list6, 0, 0);
 	list6->setWindow(parent);
+
+	getData();
+}
+
+void HotWindowClass::getData()
+{
+	QString baseUrl = "http://haojie06.me:9999/get?cloudmusic";
+	// 构造请求
+	QNetworkRequest request;
+	request.setUrl(QUrl(baseUrl));
+
+	QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+	// 发送请求
+	QNetworkReply *pReplay = manager->get(request);
+
+	// 开启一个局部的事件循环，等待响应结束，退出
+	QEventLoop eventLoop;
+	QObject::connect(manager, &QNetworkAccessManager::finished, &eventLoop, &QEventLoop::quit);
+	eventLoop.exec();
+
+	// 获取响应信息
+	QByteArray bytes = pReplay->readAll();
+	QString response = QString(bytes);
+	
 }
 
 HotWindowClass::~HotWindowClass()
