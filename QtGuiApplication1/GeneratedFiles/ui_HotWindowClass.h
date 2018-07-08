@@ -48,7 +48,7 @@ public:
     {
         if (HotWindowClass->objectName().isEmpty())
             HotWindowClass->setObjectName(QStringLiteral("HotWindowClass"));
-        HotWindowClass->resize(960, 2100);
+        HotWindowClass->resize(960, 1000);
         HotWindowClass->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
         gridLayoutWidget = new QWidget(HotWindowClass);
         gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));

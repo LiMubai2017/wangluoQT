@@ -34,7 +34,7 @@ font: 63 11pt &quot;Adobe 繁黑體 Std B&quot;;
 border-color: rgb(245, 245, 247);</string>
    </property>
    <property name="text">
-    <string>8 云烟成语</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton3">
@@ -56,7 +56,7 @@ border-color: rgb(245, 245, 247);
 text-align : left;</string>
    </property>
    <property name="text">
-    <string>3 可能否</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton4">
@@ -77,7 +77,7 @@ font: 63 11pt &quot;Adobe 繁黑體 Std B&quot;;
 border-color: rgb(245, 245, 247);</string>
    </property>
    <property name="text">
-    <string>4 浪人琵琶</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton5">
@@ -99,7 +99,7 @@ border-color: rgb(245, 245, 247);
 text-align : left;</string>
    </property>
    <property name="text">
-    <string>5 讲真的</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton1">
@@ -122,7 +122,7 @@ text-align : left;
 </string>
    </property>
    <property name="text">
-    <string>1 往后余生</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton6">
@@ -143,7 +143,7 @@ font: 63 11pt &quot;Adobe 繁黑體 Std B&quot;;
 border-color: rgb(245, 245, 247);</string>
    </property>
    <property name="text">
-    <string>6 往后余生</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton7">
@@ -165,7 +165,7 @@ border-color: rgb(245, 245, 247);
 text-align : left;</string>
    </property>
    <property name="text">
-    <string>7 怪咖</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton9">
@@ -187,7 +187,7 @@ border-color: rgb(245, 245, 247);
 text-align : left;</string>
    </property>
    <property name="text">
-    <string>9 烟火里的尘埃</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton2">
@@ -208,7 +208,7 @@ font: 63 11pt &quot;Adobe 繁黑體 Std B&quot;;
 border-color: rgb(245, 245, 247);</string>
    </property>
    <property name="text">
-    <string>2 TheGirl</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton10">
@@ -229,7 +229,7 @@ font: 63 11pt &quot;Adobe 繁黑體 Std B&quot;;
 border-color: rgb(245, 245, 247);</string>
    </property>
    <property name="text">
-    <string>10 答案</string>
+    <string/>
    </property>
   </widget>
  </widget>
@@ -252,8 +252,161 @@ border-color: rgb(245, 245, 247);</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton2</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton3</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton4</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton5</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click5()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>144</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>146</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton6</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click6()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>58</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-12</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton7</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click7()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton8</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click8()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton9</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click9()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-5</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton10</sender>
+   <signal>clicked()</signal>
+   <receiver>RankList</receiver>
+   <slot>click10()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>5</x>
+     <y>285</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-6</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>click1()</slot>
+  <slot>click2()</slot>
+  <slot>click3()</slot>
+  <slot>click4()</slot>
+  <slot>click5()</slot>
+  <slot>click6()</slot>
+  <slot>click7()</slot>
+  <slot>click8()</slot>
+  <slot>click9()</slot>
+  <slot>click10()</slot>
  </slots>
 </ui>

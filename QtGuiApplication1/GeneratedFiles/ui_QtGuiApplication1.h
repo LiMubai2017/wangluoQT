@@ -27,12 +27,13 @@ public:
     QWidget *centralWidget;
     QPushButton *hotButton;
     QPushButton *starButton;
-    QScrollArea *scrollArea;
+    QScrollArea *hotScrollArea;
     QWidget *scrollAreaWidgetContents;
-    QPushButton *wechatButton;
-    QPushButton *githubButton;
-    QPushButton *weiboButton;
     QPushButton *searchButton;
+    QScrollArea *searchScrollArea;
+    QWidget *scrollAreaWidgetContents_2;
+    QScrollArea *starScrollArea;
+    QWidget *scrollAreaWidgetContents_3;
 
     void setupUi(QMainWindow *QtGuiApplication1Class)
     {
@@ -50,46 +51,52 @@ public:
         starButton->setObjectName(QStringLiteral("starButton"));
         starButton->setGeometry(QRect(0, 480, 240, 240));
         starButton->setStyleSheet(QStringLiteral("background-image: url(:/image/Resources/star.png);"));
-        scrollArea = new QScrollArea(centralWidget);
-        scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setGeometry(QRect(240, 0, 960, 721));
-        scrollArea->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
-        scrollArea->setWidgetResizable(true);
+        hotScrollArea = new QScrollArea(centralWidget);
+        hotScrollArea->setObjectName(QStringLiteral("hotScrollArea"));
+        hotScrollArea->setGeometry(QRect(240, 0, 960, 721));
+        hotScrollArea->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        hotScrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1000, 10000));
         scrollAreaWidgetContents->setMinimumSize(QSize(1000, 10000));
-        scrollArea->setWidget(scrollAreaWidgetContents);
-        wechatButton = new QPushButton(centralWidget);
-        wechatButton->setObjectName(QStringLiteral("wechatButton"));
-        wechatButton->setGeometry(QRect(0, 240, 240, 80));
-        wechatButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 120, 215);\n"
-"font: 12pt \"\351\273\221\344\275\223\";"));
-        githubButton = new QPushButton(centralWidget);
-        githubButton->setObjectName(QStringLiteral("githubButton"));
-        githubButton->setGeometry(QRect(0, 320, 240, 80));
-        githubButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 120, 215);\n"
-"font: 12pt \"\351\273\221\344\275\223\";"));
-        weiboButton = new QPushButton(centralWidget);
-        weiboButton->setObjectName(QStringLiteral("weiboButton"));
-        weiboButton->setGeometry(QRect(0, 400, 240, 80));
-        weiboButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 120, 215);\n"
-"font: 12pt \"\351\273\221\344\275\223\";"));
+        hotScrollArea->setWidget(scrollAreaWidgetContents);
         searchButton = new QPushButton(centralWidget);
         searchButton->setObjectName(QStringLiteral("searchButton"));
         searchButton->setGeometry(QRect(0, 240, 240, 240));
         searchButton->setStyleSheet(QStringLiteral("background-image: url(:/image/Resources/search.png);"));
+        searchScrollArea = new QScrollArea(centralWidget);
+        searchScrollArea->setObjectName(QStringLiteral("searchScrollArea"));
+        searchScrollArea->setGeometry(QRect(240, 0, 960, 721));
+        searchScrollArea->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        searchScrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1000, 10000));
+        scrollAreaWidgetContents_2->setMinimumSize(QSize(1000, 10000));
+        searchScrollArea->setWidget(scrollAreaWidgetContents_2);
+        starScrollArea = new QScrollArea(centralWidget);
+        starScrollArea->setObjectName(QStringLiteral("starScrollArea"));
+        starScrollArea->setGeometry(QRect(240, 0, 960, 721));
+        starScrollArea->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        starScrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents_3 = new QWidget();
+        scrollAreaWidgetContents_3->setObjectName(QStringLiteral("scrollAreaWidgetContents_3"));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 1000, 10000));
+        scrollAreaWidgetContents_3->setMinimumSize(QSize(1000, 10000));
+        starScrollArea->setWidget(scrollAreaWidgetContents_3);
         QtGuiApplication1Class->setCentralWidget(centralWidget);
-        weiboButton->raise();
-        githubButton->raise();
-        wechatButton->raise();
         hotButton->raise();
         starButton->raise();
         searchButton->raise();
-        scrollArea->raise();
+        hotScrollArea->raise();
+        searchScrollArea->raise();
+        starScrollArea->raise();
 
         retranslateUi(QtGuiApplication1Class);
         QObject::connect(searchButton, SIGNAL(clicked()), QtGuiApplication1Class, SLOT(searchClicked()));
+        QObject::connect(hotButton, SIGNAL(clicked()), QtGuiApplication1Class, SLOT(hotClicked()));
+        QObject::connect(starButton, SIGNAL(clicked()), QtGuiApplication1Class, SLOT(starClicked()));
 
         QMetaObject::connectSlotsByName(QtGuiApplication1Class);
     } // setupUi
@@ -99,9 +106,6 @@ public:
         QtGuiApplication1Class->setWindowTitle(QApplication::translate("QtGuiApplication1Class", "QtGuiApplication1", Q_NULLPTR));
         hotButton->setText(QString());
         starButton->setText(QString());
-        wechatButton->setText(QApplication::translate("QtGuiApplication1Class", "\345\276\256\344\277\241\345\205\254\344\274\227\345\217\267\350\277\275\350\270\252", Q_NULLPTR));
-        githubButton->setText(QApplication::translate("QtGuiApplication1Class", "GitHub\346\233\264\346\226\260\350\277\275\350\270\252", Q_NULLPTR));
-        weiboButton->setText(QApplication::translate("QtGuiApplication1Class", "\345\276\256\345\215\232\347\224\250\346\210\267\346\233\264\346\226\260", Q_NULLPTR));
         searchButton->setText(QString());
     } // retranslateUi
 

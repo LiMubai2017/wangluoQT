@@ -48,24 +48,29 @@ RankList::RankList(QWidget *parent)
 		"QPushButton:pressed{background-color:rgb(230, 230, 230); border-style: inset; }");
 
 	setDefaultData();
-	ui.pushButton1->setText(QString("1 ") +  data.at(0) + "  " + data.at(1));
-	/*ui.pushButton2->setText(QString("2 ") + data.at(3) + "  " + data.at(4));
-	ui.pushButton3->setText(QString("3 ") + data.at(6) + "  " + data.at(7));
-	ui.pushButton4->setText(QString("4 ") + data.at(9) + "  " + data.at(10));
-	ui.pushButton5->setText(QString("5 ") + data.at(12) + "  " + data.at(13));
-	ui.pushButton6->setText(QString("6 ") + data.at(15) + "  " + data.at(16));
-	ui.pushButton7->setText(QString("7 ") + data.at(18) + "  " + data.at(19));
-	ui.pushButton8->setText(QString("8 ") + data.at(21) + "  " + data.at(22));
-	ui.pushButton9->setText(QString("9 ") + data.at(24) + "  " + data.at(25));
-	ui.pushButton10->setText(QString("10 ") + data.at(27) + "  " + data.at(28));*/
+	updataUI();
 }
-
 
 void RankList::setDefaultData()
 {
-	
-	data << QStringLiteral("往后余生") << QStringLiteral("马良") << "http://music.163.com/#/song?id=571338279";
+	data = new QStringList();
+	for (int i = 0; i <= 10; i++) {
+		*data << QString(QStringLiteral("加载中")) << QString(QStringLiteral("请稍后")) << "http://www.baidu.com";
+	}
+}
 
+void RankList::updataUI()
+{
+	ui.pushButton1->setText(QString("1 ") + data->at(0) + "  " + data->at(1));
+	ui.pushButton2->setText(QString("2 ") + data->at(3) + "  " + data->at(4));
+	ui.pushButton3->setText(QString("3 ") + data->at(6) + "  " + data->at(7));
+	ui.pushButton4->setText(QString("4 ") + data->at(9) + "  " + data->at(10));
+	ui.pushButton5->setText(QString("5 ") + data->at(12) + "  " + data->at(13));
+	ui.pushButton6->setText(QString("6 ") + data->at(15) + "  " + data->at(16));
+	ui.pushButton7->setText(QString("7 ") + data->at(18) + "  " + data->at(19));
+	ui.pushButton8->setText(QString("8 ") + data->at(21) + "  " + data->at(22));
+	ui.pushButton9->setText(QString("9 ") + data->at(24) + "  " + data->at(25));
+	ui.pushButton10->setText(QString("10 ") + data->at(27) + "  " + data->at(28));
 }
 
 void RankList::setWindow(QWidget *window)
@@ -73,9 +78,10 @@ void RankList::setWindow(QWidget *window)
 	this->window = window;
 }
 
-void RankList::setData(QStringList data)
+void RankList::setData(QStringList *data)
 {
 	this->data = data;
+	updataUI();
 }
 
 void RankList::openWeb(QString url) {
@@ -103,16 +109,16 @@ void RankList::openWeb(QString url) {
 	paraGroup->start();
 }
 
-void RankList::click1() { openWeb(data.at(2)); }
-void RankList:: click2(){}
-void RankList:: click3(){}
-void RankList:: click4(){}
-void RankList:: click5(){}
-void RankList:: click6(){}
-void RankList:: click7(){}
-void RankList:: click8(){}
-void RankList:: click9(){}
-void RankList:: click10(){}
+void RankList::click1() { openWeb(data->at(2)); }
+void RankList::click2() { openWeb(data->at(5)); }
+void RankList::click3() { openWeb(data->at(8)); }
+void RankList::click4() { openWeb(data->at(11)); }
+void RankList::click5() { openWeb(data->at(14)); }
+void RankList::click6() { openWeb(data->at(17)); }
+void RankList::click7() { openWeb(data->at(20)); }
+void RankList::click8() { openWeb(data->at(23)); }
+void RankList::click9() { openWeb(data->at(26));}
+void RankList::click10() { openWeb(data->at(29)); }
 
 RankList::~RankList()
 {

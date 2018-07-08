@@ -118,6 +118,15 @@ public:
 
         retranslateUi(RankList);
         QObject::connect(pushButton1, SIGNAL(clicked()), RankList, SLOT(click1()));
+        QObject::connect(pushButton2, SIGNAL(clicked()), RankList, SLOT(click2()));
+        QObject::connect(pushButton3, SIGNAL(clicked()), RankList, SLOT(click3()));
+        QObject::connect(pushButton4, SIGNAL(clicked()), RankList, SLOT(click4()));
+        QObject::connect(pushButton5, SIGNAL(clicked()), RankList, SLOT(click5()));
+        QObject::connect(pushButton6, SIGNAL(clicked()), RankList, SLOT(click6()));
+        QObject::connect(pushButton7, SIGNAL(clicked()), RankList, SLOT(click7()));
+        QObject::connect(pushButton8, SIGNAL(clicked()), RankList, SLOT(click8()));
+        QObject::connect(pushButton9, SIGNAL(clicked()), RankList, SLOT(click9()));
+        QObject::connect(pushButton10, SIGNAL(clicked()), RankList, SLOT(click10()));
 
         QMetaObject::connectSlotsByName(RankList);
     } // setupUi
@@ -125,16 +134,16 @@ public:
     void retranslateUi(QWidget *RankList)
     {
         RankList->setWindowTitle(QApplication::translate("RankList", "RankList", Q_NULLPTR));
-        pushButton8->setText(QApplication::translate("RankList", "8 \344\272\221\347\203\237\346\210\220\350\257\255", Q_NULLPTR));
-        pushButton3->setText(QApplication::translate("RankList", "3 \345\217\257\350\203\275\345\220\246", Q_NULLPTR));
-        pushButton4->setText(QApplication::translate("RankList", "4 \346\265\252\344\272\272\347\220\265\347\220\266", Q_NULLPTR));
-        pushButton5->setText(QApplication::translate("RankList", "5 \350\256\262\347\234\237\347\232\204", Q_NULLPTR));
-        pushButton1->setText(QApplication::translate("RankList", "1 \345\276\200\345\220\216\344\275\231\347\224\237", Q_NULLPTR));
-        pushButton6->setText(QApplication::translate("RankList", "6 \345\276\200\345\220\216\344\275\231\347\224\237", Q_NULLPTR));
-        pushButton7->setText(QApplication::translate("RankList", "7 \346\200\252\345\222\226", Q_NULLPTR));
-        pushButton9->setText(QApplication::translate("RankList", "9 \347\203\237\347\201\253\351\207\214\347\232\204\345\260\230\345\237\203", Q_NULLPTR));
-        pushButton2->setText(QApplication::translate("RankList", "2 TheGirl", Q_NULLPTR));
-        pushButton10->setText(QApplication::translate("RankList", "10 \347\255\224\346\241\210", Q_NULLPTR));
+        pushButton8->setText(QString());
+        pushButton3->setText(QString());
+        pushButton4->setText(QString());
+        pushButton5->setText(QString());
+        pushButton1->setText(QString());
+        pushButton6->setText(QString());
+        pushButton7->setText(QString());
+        pushButton9->setText(QString());
+        pushButton2->setText(QString());
+        pushButton10->setText(QString());
     } // retranslateUi
 
 };

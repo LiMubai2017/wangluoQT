@@ -42,6 +42,12 @@
     <ClCompile Include="RankList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SearchWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StarWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtGuiApplication1.h">
@@ -53,6 +59,12 @@
     <QtMoc Include="RankList.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="SearchWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="StarWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QtGuiApplication1.ui">
@@ -62,6 +74,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="RankList.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SearchWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="StarWindow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

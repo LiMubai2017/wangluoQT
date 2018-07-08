@@ -2,6 +2,9 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_QtGuiApplication1.h"
+#include <QtWebEngineWidgets>
+#include <HotWindowClass.h>
+#include <SearchWindow.h>
 
 class QtGuiApplication1 : public QMainWindow
 {
@@ -12,8 +15,11 @@ public:
 
 private:
 	Ui::QtGuiApplication1Class ui;
+	HotWindowClass * hotWindow;
+	SearchWindow * searchWindow;
 
 private slots:
 	void searchClicked();
-
+	void hotClicked();
+	void starClicked();
 };

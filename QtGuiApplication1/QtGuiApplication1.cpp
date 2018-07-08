@@ -1,29 +1,30 @@
 #include "QtGuiApplication1.h"
-#include <QtWebEngineWidgets>
-#include <HotWindowClass.h>
-
 
 QtGuiApplication1::QtGuiApplication1(QWidget *parent)
 	: QMainWindow(parent)
 {
-	HotWindowClass *hotWindow = new HotWindowClass(this);
-
 	ui.setupUi(this);
 
-	ui.githubButton->hide();
-	ui.wechatButton->hide();
-	ui.weiboButton->hide();
-	
-	hotWindow->setMinimumSize(QSize(800, 3000));
-	ui.scrollArea->setWidget(hotWindow);
+	hotWindow = new HotWindowClass(this);
+	searchWindow = new SearchWindow(this);
+
+	hotWindow->setMinimumSize(QSize(800, 1000));
+	searchWindow->setMinimumSize(QSize(800, 1000));
+
+	ui.searchScrollArea->setWidget(searchWindow);
+	ui.hotScrollArea->setWidget(hotWindow);
+	ui.searchScrollArea->hide();
+	ui.starScrollArea->hide();
+	//ui.hotScrollArea->hide();
+
 
 	/*QPropertyAnimation *animation = new QPropertyAnimation(this, "windowOpacity");
 	animation->setDuration(1000);
 	animation->setStartValue(0);
 	animation->setEndValue(1);
-	animation->start();*/
+	animation->start();
 
-	/*QPropertyAnimation *moveAnimation = new QPropertyAnimation(ui.searchButton, "geometry");
+	QPropertyAnimation *moveAnimation = new QPropertyAnimation(ui.searchButton, "geometry");
 	moveAnimation->setDuration(1000);
 	moveAnimation->setStartValue(QRect(0, 0, 240, 240));
 	moveAnimation->setEndValue(QRect(0, 240, 240, 480));
@@ -46,6 +47,22 @@ QtGuiApplication1::QtGuiApplication1(QWidget *parent)
 
 void QtGuiApplication1::searchClicked()
 {
-	
-	
+	//searchWindow = new SearchWindow(this);
+	ui.starScrollArea->hide();
+	ui.hotScrollArea->hide();
+	ui.searchScrollArea->show();
+}
+
+void QtGuiApplication1::hotClicked()
+{
+	//hotWindow = new HotWindowClass(this);
+	ui.hotScrollArea->show();
+	ui.starScrollArea->hide();
+	ui.searchScrollArea->hide();
+}
+
+void QtGuiApplication1::starClicked()
+{
+
+
 }

@@ -14,18 +14,19 @@ class RankList : public QWidget
 public:
 	RankList(QWidget *parent = Q_NULLPTR);
 	~RankList();
-	void setData(QStringList data);
+	void setData(QStringList *data);
 	void setWindow(QWidget *window);
 
 private:
-	QStringList  data ;
+	QStringList *data ;
 	QWidget *window;
 
+	void setDefaultData();
+	void updataUI();
 	void openWeb(QString url);
 	Ui::RankList ui;
 
 private slots:
-	void setDefaultData();
 	void click1();
 	void click2();
 	void click3();
