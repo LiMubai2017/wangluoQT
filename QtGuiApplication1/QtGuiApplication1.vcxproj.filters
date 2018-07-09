@@ -48,6 +48,9 @@
     <ClCompile Include="StarWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WeiboItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtGuiApplication1.h">
@@ -65,6 +68,9 @@
     <QtMoc Include="StarWindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="WeiboItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QtGuiApplication1.ui">
@@ -80,6 +86,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="StarWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WeiboItem.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

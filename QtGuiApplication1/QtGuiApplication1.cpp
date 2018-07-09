@@ -9,7 +9,7 @@ QtGuiApplication1::QtGuiApplication1(QWidget *parent)
 	searchWindow = new SearchWindow(this);
 
 	hotWindow->setMinimumSize(QSize(800, 1000));
-	searchWindow->setMinimumSize(QSize(800, 1000));
+	searchWindow->setMinimumSize(QSize(800, 2000));
 
 	ui.searchScrollArea->setWidget(searchWindow);
 	ui.hotScrollArea->setWidget(hotWindow);
@@ -47,7 +47,6 @@ QtGuiApplication1::QtGuiApplication1(QWidget *parent)
 
 void QtGuiApplication1::searchClicked()
 {
-	//searchWindow = new SearchWindow(this);
 	ui.starScrollArea->hide();
 	ui.hotScrollArea->hide();
 	ui.searchScrollArea->show();
@@ -55,7 +54,6 @@ void QtGuiApplication1::searchClicked()
 
 void QtGuiApplication1::hotClicked()
 {
-	//hotWindow = new HotWindowClass(this);
 	ui.hotScrollArea->show();
 	ui.starScrollArea->hide();
 	ui.searchScrollArea->hide();

@@ -1,1 +1,9 @@
-﻿  QtGuiApplication1.vcxproj -> D:\MuBai for programing\wangluo QT\QtGuiApplication1\x64\Debug\QtGuiApplication1.exe
+﻿  Uic'ing WeiboItem.ui...
+  moc_QtGuiApplication1.cpp
+  moc_SearchWindow.cpp
+  moc_WeiboItem.cpp
+  QtGuiApplication1.cpp
+  SearchWindow.cpp
+  WeiboItem.cpp
+  main.cpp
+  QtGuiApplication1.vcxproj -> D:\MuBai for programing\wangluo QT\QtGuiApplication1\x64\Debug\QtGuiApplication1.exe
