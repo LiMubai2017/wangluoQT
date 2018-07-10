@@ -161,6 +161,91 @@
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="weiboButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>240</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/weiboButton.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dongmanButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>320</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/dongmanButton.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="qidianButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>400</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/qidianButton.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shipinButton">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>320</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/shipinButton.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zhihuButton">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>240</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image/Resources/zhihuButton.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>zhihuButton</zorder>
+   <zorder>shipinButton</zorder>
+   <zorder>qidianButton</zorder>
+   <zorder>dongmanButton</zorder>
+   <zorder>weiboButton</zorder>
    <zorder>hotButton</zorder>
    <zorder>starButton</zorder>
    <zorder>searchButton</zorder>
@@ -222,11 +307,97 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>weiboButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGuiApplication1Class</receiver>
+   <slot>weiboClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>206</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>-18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dongmanButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGuiApplication1Class</receiver>
+   <slot>dongmanClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>-9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>qidianButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGuiApplication1Class</receiver>
+   <slot>qidianClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>-15</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zhihuButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGuiApplication1Class</receiver>
+   <slot>zhihuClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>294</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-4</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>shipinButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGuiApplication1Class</receiver>
+   <slot>shipinClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-6</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>button()</slot>
   <slot>searchClicked()</slot>
   <slot>hotClicked()</slot>
   <slot>starClicked()</slot>
+  <slot>weiboClicked()</slot>
+  <slot>slot1()</slot>
+  <slot>dongmanClicked()</slot>
+  <slot>qidianClicked()</slot>
+  <slot>zhihuClicked()</slot>
+  <slot>shipinClicked()</slot>
  </slots>
 </ui>

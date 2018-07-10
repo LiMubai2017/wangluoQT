@@ -9,5 +9,19 @@
         <file>Resources/tieba.png</file>
         <file>Resources/weibo.png</file>
         <file>Resources/netMusicUp.png</file>
+        <file>Resources/begin.gif</file>
+        <file>Resources/hot.png</file>
+        <file>Resources/littleMask.png</file>
+        <file>Resources/logo.png</file>
+        <file>Resources/roundMask.png</file>
+        <file>Resources/search.png</file>
+        <file>Resources/star.png</file>
+        <file>Resources/weibobg.png</file>
+        <file>Resources/榜单标题.psd</file>
+        <file>Resources/baidu_arts.png</file>
+        <file>Resources/baidu_dongman.png</file>
+        <file>Resources/baidu_fiction.png</file>
+        <file>Resources/baidu_movie.png</file>
+        <file>Resources/baidu_opera.png</file>
     </qresource>
 </RCC>

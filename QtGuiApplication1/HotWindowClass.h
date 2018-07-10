@@ -12,6 +12,7 @@ class HotWindowClass : public QWidget
 public:
 	void parseNetMusicData(QString data);
 	void parseHotNews(QString data);
+	void parseHotMedia(QString data);
 	QString getData(QString url);
 	HotWindowClass(QWidget *parent = Q_NULLPTR);
 	~HotWindowClass();
@@ -23,6 +24,11 @@ private:
 	QStringList *baiduList = new QStringList();
 	QStringList *tiebaList = new QStringList();
 	QStringList *weiboList = new QStringList();
+	QStringList *baiduDongmanList = new QStringList();
+	QStringList *baiduFictionList = new QStringList();
+	QStringList *baiduMovieList = new QStringList();
+	QStringList *baiduOperaList = new QStringList();
+	QStringList *baiduArtsList = new QStringList();
 
 	RankList *list1 ;
 	RankList *list2 ;
@@ -30,5 +36,11 @@ private:
 	RankList *list4 ;
 	RankList *list5 ;
 	RankList *list6 ;
+	RankList *list7 ;
+	RankList *list8 ;
+	RankList *list9 ;
+	RankList *list10 ;
+	RankList *list11 ;
+	RankList *list12 ;
 	Ui::HotWindowClass ui;
 };

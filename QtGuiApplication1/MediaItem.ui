@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MediaItem</class>
+ <widget class="QWidget" name="MediaItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MediaItem</string>
+  </property>
+  <widget class="QLabel" name="imageLabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>180</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nameLabel">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>20</y>
+     <width>180</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">qproperty-alignment: 'AlignTop';
+font: 24pt &quot;Adobe 黑体 Std R&quot;;</string>
+   </property>
+   <property name="text">
+    <string>妖怪名单</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="authorLabel">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>80</y>
+     <width>180</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;Adobe 黑体 Std R&quot;;</string>
+   </property>
+   <property name="text">
+    <string>糖人家</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="descriptionLabel">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>150</y>
+     <width>441</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="updateLabel">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>290</y>
+     <width>400</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 11pt &quot;Adobe 繁黑體 Std B&quot;;</string>
+   </property>
+   <property name="text">
+    <string>371. 醒了</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>290</y>
+     <width>91</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 11pt &quot;Adobe 繁黑體 Std B&quot;;</string>
+   </property>
+   <property name="text">
+    <string>最近更新：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="backgroundLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>360</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/Resources/dongmanbg.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>270</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>backgroundLabel</zorder>
+  <zorder>imageLabel</zorder>
+  <zorder>nameLabel</zorder>
+  <zorder>authorLabel</zorder>
+  <zorder>descriptionLabel</zorder>
+  <zorder>updateLabel</zorder>
+  <zorder>label_2</zorder>
+  <zorder>pushButton</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MediaItem.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MediaItem</receiver>
+   <slot>openWeb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>796</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>726</x>
+     <y>-13</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openWeb()</slot>
+ </slots>
+</ui>

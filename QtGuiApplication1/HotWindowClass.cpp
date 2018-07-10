@@ -8,9 +8,15 @@ HotWindowClass::HotWindowClass(QWidget *parent)
 	list1 = new RankList(this);
 	list2 = new RankList(this);
 	list3 = new RankList(this);
-	list4 = new RankList(this);
+	
 	list5 = new RankList(this);
 	list6 = new RankList(this);
+	list7 = new RankList(this);
+	list8 = new RankList(this);
+	list9 = new RankList(this);
+	list10 = new RankList(this);
+	list11 = new RankList(this);
+	list12 = new RankList(this);
 
 	ui.netMusicHotLayout->addWidget(list1, 0, 0);
 	list1->setWindow(parent);
@@ -18,16 +24,92 @@ HotWindowClass::HotWindowClass(QWidget *parent)
 	list2->setWindow(parent);
 	ui.netMusicUpLayout->addWidget(list3, 0, 0);
 	list3->setWindow(parent);
-	ui.baiduLayout->addWidget(list4, 0, 0);
-	list4->setWindow(parent);
 	ui.tiebaLayout->addWidget(list5, 0, 0);
 	list5->setWindow(parent);
 	ui.weiboLayout->addWidget(list6, 0, 0);
 	list6->setWindow(parent);
+	ui.baiduLayout->addWidget(list7, 0, 0);
+	list7->setWindow(parent);
+	ui.baiduDongmanLayout->addWidget(list8, 0, 0);
+	list8->setWindow(parent);
+	ui.baiduFictionLayout->addWidget(list9, 0, 0);
+	list9->setWindow(parent);
+	ui.baiduMovieLayout->addWidget(list10, 0, 0);
+	list10->setWindow(parent);
+	ui.baiduOperaLayout->addWidget(list11, 0, 0);
+	list11->setWindow(parent);
+	ui.baiduArtsLayout->addWidget(list12, 0, 0);
+	list12->setWindow(parent);
+	
 
 	parseNetMusicData(getData(QString("http://haojie06.me:9999/get?cloudmusic")));
 	//list1->setData(netMusicUpList);
 	parseHotNews(getData(QString("http://haojie06.me:9999/get?hotnews")));
+	parseHotMedia(getData(QString("http://haojie06.me:9999/get?hotmedia")));
+}
+
+void HotWindowClass::parseHotMedia(QString data)
+{
+	int l, r;
+	for (int i = 1; i <= 10; i++) {
+		l = data.indexOf(QString(QStringLiteral("热门电影$$%1$$")).arg(i)) + 9;
+		if (i == 10) l++;
+		r = data.indexOf("$$", l);
+		QString title = data.mid(l, r - l);
+		l = r + 2;
+		r = data.indexOf("$$", l);
+		QString src = data.mid(l, r - l);
+		*baiduMovieList << title << " " << src;
+	}
+	list10->setData(baiduMovieList);
+
+	for (int i = 1; i <= 10; i++) {
+		l = data.indexOf(QString(QStringLiteral("热门电视剧$$%1$$")).arg(i)) + 10;
+		if (i == 10) l++;
+		r = data.indexOf("$$", l);
+		QString title = data.mid(l, r - l);
+		l = r + 2;
+		r = data.indexOf("$$", l);
+		QString src = data.mid(l, r - l);
+		*baiduOperaList << title << " " << src;
+	}
+	list11->setData(baiduOperaList);
+
+	for (int i = 1; i <= 10; i++) {
+		l = data.indexOf(QString(QStringLiteral("热门综艺$$%1$$")).arg(i)) + 9;
+		if (i == 10) l++;
+		r = data.indexOf("$$", l);
+		QString title = data.mid(l, r - l);
+		l = r + 2;
+		r = data.indexOf("$$", l);
+		QString src = data.mid(l, r - l);
+		*baiduArtsList << title << " " << src;
+	}
+	list12->setData(baiduArtsList);
+
+	for (int i = 1; i <= 10; i++) {
+		l = data.indexOf(QString(QStringLiteral("热门动漫$$%1$$")).arg(i)) + 9;
+		if (i == 10) l++;
+		r = data.indexOf("$$", l);
+		QString title = data.mid(l, r - l);
+		l = r + 2;
+		r = data.indexOf("$$", l);
+		QString src = data.mid(l, r - l);
+		*baiduDongmanList << title << " " << src;
+	}
+	list8->setData(baiduDongmanList);
+
+	for (int i = 1; i <= 10; i++) {
+		l = data.indexOf(QString(QStringLiteral("热门小说$$%1$$")).arg(i)) + 9;
+		if (i == 10) l++;
+		r = data.indexOf("$$", l);
+		QString title = data.mid(l, r - l);
+		l = r + 2;
+		r = data.indexOf("$$", l);
+		QString src = data.mid(l, r - l);
+		*baiduFictionList << title << " " << src;
+	}
+	list9->setData(baiduFictionList);
 }
 
 void HotWindowClass::parseHotNews(QString data)
@@ -43,7 +125,7 @@ void HotWindowClass::parseHotNews(QString data)
 		QString src = data.mid(l, r - l);
 		*baiduList << title << " " << src;
 	}
-	list4->setData(baiduList);
+	list7->setData(baiduList);
 
 	for (int i = 1; i <= 10; i++) {
 		l = data.indexOf(QString(QStringLiteral("贴吧实时热点$$%1$$")).arg(i)) + 11;

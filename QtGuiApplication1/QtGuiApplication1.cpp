@@ -8,8 +8,8 @@ QtGuiApplication1::QtGuiApplication1(QWidget *parent)
 	hotWindow = new HotWindowClass(this);
 	searchWindow = new SearchWindow(this);
 
-	hotWindow->setMinimumSize(QSize(800, 1000));
-	searchWindow->setMinimumSize(QSize(800, 2000));
+	hotWindow->setMinimumSize(QSize(800, 2000));
+	searchWindow->setMinimumSize(QSize(800, 3600));
 
 	ui.searchScrollArea->setWidget(searchWindow);
 	ui.hotScrollArea->setWidget(hotWindow);
@@ -42,18 +42,61 @@ QtGuiApplication1::QtGuiApplication1(QWidget *parent)
 }
 
 
+void QtGuiApplication1::showSearchItemButtons()
+{
+	QPropertyAnimation *moveAnimation = new QPropertyAnimation(ui.searchButton, "geometry");
+	moveAnimation->setDuration(1000);
+	moveAnimation->setStartValue(QRect(0, 240, 240, 240));
+	moveAnimation->setEndValue(QRect(-160, 240, 240, 240));
+	moveAnimation->setEasingCurve(QEasingCurve::OutBounce);
+	moveAnimation->start();
+}
+void QtGuiApplication1::hideSearchItemButtons()
+{
+	QPropertyAnimation *moveAnimation = new QPropertyAnimation(ui.searchButton, "geometry");
+	moveAnimation->setDuration(1000);
+	moveAnimation->setStartValue(QRect(-160, 240, 240, 240));
+	moveAnimation->setEndValue(QRect(0, 240, 240, 240));
+	moveAnimation->setEasingCurve(QEasingCurve::OutBounce);
+	moveAnimation->start();
+}
 
+ void QtGuiApplication1 :: weiboClicked()
+ {
+	 searchWindow->showWeibo();
+ }
+ void QtGuiApplication1 :: dongmanClicked()
+ {
+	 searchWindow->showDongman();
+ }
+ void QtGuiApplication1 :: shipinClicked()
+ {
+	 searchWindow->showShipin();
+ }
+ void QtGuiApplication1 :: zhihuClicked()
+ {
+	 searchWindow->showZhihu();
+ }
+ void QtGuiApplication1 :: qidianClicked()
+ {
+	 searchWindow->showQidian();
+ }
 
 
 void QtGuiApplication1::searchClicked()
 {
+	lastClicked = 2;
 	ui.starScrollArea->hide();
 	ui.hotScrollArea->hide();
 	ui.searchScrollArea->show();
+
+	showSearchItemButtons();
 }
 
 void QtGuiApplication1::hotClicked()
 {
+	if (lastClicked == 2) hideSearchItemButtons();
+	lastClicked = 1;
 	ui.hotScrollArea->show();
 	ui.starScrollArea->hide();
 	ui.searchScrollArea->hide();
@@ -61,6 +104,8 @@ void QtGuiApplication1::hotClicked()
 
 void QtGuiApplication1::starClicked()
 {
+	if (lastClicked == 2) hideSearchItemButtons();
+	lastClicked = 3;
 
 
 }

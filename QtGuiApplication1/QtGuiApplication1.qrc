@@ -5,5 +5,10 @@
         <file>Resources/star.png</file>
         <file>Resources/logo.png</file>
         <file>Resources/netMusicHot.png</file>
+        <file>Resources/dongmanButton.png</file>
+        <file>Resources/qidianButton.png</file>
+        <file>Resources/shipinButton.png</file>
+        <file>Resources/weiboButton.png</file>
+        <file>Resources/zhihuButton.png</file>
     </qresource>
 </RCC>

@@ -14,12 +14,21 @@ public:
 	QtGuiApplication1(QWidget *parent = Q_NULLPTR);
 
 private:
+	void showSearchItemButtons();
+	void hideSearchItemButtons();
+
 	Ui::QtGuiApplication1Class ui;
 	HotWindowClass * hotWindow;
 	SearchWindow * searchWindow;
+	int lastClicked = 1;
 
 private slots:
 	void searchClicked();
 	void hotClicked();
 	void starClicked();
+	void weiboClicked();
+	void dongmanClicked();
+	void shipinClicked();
+	void zhihuClicked();
+	void qidianClicked();
 };

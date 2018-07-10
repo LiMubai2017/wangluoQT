@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="image">
+    <file>Resources/begin.gif</file>
+  </qresource>
+  <qresource prefix="新前缀"/>
+</RCC>
