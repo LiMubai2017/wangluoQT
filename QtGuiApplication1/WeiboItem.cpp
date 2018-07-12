@@ -21,6 +21,9 @@ void WeiboItem::setBackgroundImage(QPixmap pixmap)
 	ui.backgroundImage->setPixmap(pixmap);
 }
 
+
+
+
 void WeiboItem::setData(QStringList *title, QString imageUrl, QString webUrl, QStringList *list, QStringList * data,QString name)
 {
 	this->name = name;

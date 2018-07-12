@@ -7,9 +7,6 @@
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	QtGuiApplication1 w;
-	QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
-
 	//加载静态启动画面
 	/*QPixmap pix("Resources/logo.png");
 	QSplashScreen splash(pix);
@@ -17,7 +14,7 @@ int main(int argc, char *argv[])
 	a.processEvents();*/
 
 	//加载动态启动画面
-	/*QPixmap pix("Resources/begin.gif");
+	QPixmap pix("Resources/begin.gif");
 	QSplashScreen splash(pix);
 	QLabel splashlabel(&splash);
 	QMovie splashgif("Resources/begin.gif");
@@ -28,11 +25,14 @@ int main(int argc, char *argv[])
 	for (int i = 0; i<15000; i += splashgif.speed()) {
 		QCoreApplication::processEvents();
 		Sleep(splashgif.speed() / 5);
-	}*/
+	}
+
+	QtGuiApplication1 w;
+	QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
 
 
 	w.show();
 
-	//splash.finish(&w);
+	splash.finish(&w);
 	return a.exec();
 }

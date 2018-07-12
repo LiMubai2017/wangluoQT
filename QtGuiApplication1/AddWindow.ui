@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddWindow</class>
+ <widget class="QWidget" name="AddWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>718</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AddWindow</string>
+  </property>
+  <widget class="QLabel" name="weiboLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>150</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/weiboLabel.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cartoonLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>150</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/cartoonLabel.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="qidianLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>300</y>
+     <width>150</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/qidianLabel.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="zhihuLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>430</y>
+     <width>150</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/zhihuLabel.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="shipinLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>560</y>
+     <width>150</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/image/shipinLabel.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="weiboInput">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>40</y>
+     <width>381</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="weiboButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>90</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weiboResult">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>90</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="cartoonInput">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>170</y>
+     <width>381</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="qidianInput">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>300</y>
+     <width>381</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="zhihuInput">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>430</y>
+     <width>381</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="shipinInput">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>560</y>
+     <width>381</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cartoonButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>220</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="qidianButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>350</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="shipinButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>610</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="zhihuButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>480</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cartoonResult">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>220</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="qidianResult">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>350</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="zhihuResult">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>480</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="shipinResult">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>610</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>950</width>
+     <height>718</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>weiboLabel</zorder>
+  <zorder>cartoonLabel</zorder>
+  <zorder>qidianLabel</zorder>
+  <zorder>zhihuLabel_2</zorder>
+  <zorder>shipinLabel</zorder>
+  <zorder>weiboInput</zorder>
+  <zorder>weiboButton</zorder>
+  <zorder>weiboResult</zorder>
+  <zorder>cartoonInput</zorder>
+  <zorder>qidianInput</zorder>
+  <zorder>zhihuInput</zorder>
+  <zorder>shipinInput</zorder>
+  <zorder>cartoonButton</zorder>
+  <zorder>qidianButton</zorder>
+  <zorder>shipinButton</zorder>
+  <zorder>zhihuButton</zorder>
+  <zorder>cartoonResult</zorder>
+  <zorder>qidianResult</zorder>
+  <zorder>zhihuResult</zorder>
+  <zorder>shipinResult</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Resources/addWindow.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>weiboButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddWindow</receiver>
+   <slot>addWeibo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>313</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>-21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cartoonButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddWindow</receiver>
+   <slot>addCartoon()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>-14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>qidianButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddWindow</receiver>
+   <slot>addQidian()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>317</x>
+     <y>364</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zhihuButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddWindow</receiver>
+   <slot>addZhihu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>690</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>shipinButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddWindow</receiver>
+   <slot>addShipin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>641</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>678</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addWeibo()</slot>
+  <slot>addCartoon()</slot>
+  <slot>addQidian()</slot>
+  <slot>addZhihu()</slot>
+  <slot>addShipin()</slot>
+ </slots>
+</ui>

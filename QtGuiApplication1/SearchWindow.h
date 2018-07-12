@@ -6,6 +6,7 @@
 #include <qlabel.h>
 #include <WeiboItem.h>
 #include<MediaItem.h>
+#include<AddWindow.h>
 
 class SearchWindow : public QWidget
 {
@@ -19,6 +20,8 @@ public:
 	void showQidian();
 	void showDongman();
 	void showShipin();
+	void hideAll();
+	void showAdd();
 
 private:
 	QListWidget *lastPage;
@@ -40,6 +43,7 @@ private:
 	void addZhihuItem(QStringList *titleList, QString imageUrl, QString webUrl, QStringList *list, QStringList *date,QString name);
 	void addDongmanItem(QString webUrl,QString iamgeUrl, QString name, QString author, QString description, QString updateTitle);
 	void addNovelItem(QString webUrl,QString iamgeUrl, QString name, QString author, QString description, QString updateTitle);
+	void addShipinItem(QString webUrl, QString iamgeUrl, QString name, QString author, QString description, QString updateTitle);
 
 private slots:
 };

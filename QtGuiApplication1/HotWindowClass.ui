@@ -94,7 +94,7 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>990</y>
+     <y>550</y>
      <width>250</width>
      <height>82</height>
     </rect>
@@ -116,7 +116,7 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>1070</y>
+     <y>640</y>
      <width>251</width>
      <height>301</height>
     </rect>
@@ -207,8 +207,8 @@
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>1420</y>
+     <x>50</x>
+     <y>980</y>
      <width>250</width>
      <height>82</height>
     </rect>
@@ -223,8 +223,8 @@
   <widget class="QWidget" name="verticalLayoutWidget_6">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>1510</y>
+     <x>50</x>
+     <y>1070</y>
      <width>251</width>
      <height>301</height>
     </rect>

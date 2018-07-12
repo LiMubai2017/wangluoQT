@@ -11,45 +11,49 @@ SearchWindow::SearchWindow(QWidget *parent)
 	ui.dongmanListWidget->hide();
 	ui.shipinListWidget->hide();
 	ui.qidianListWidget->hide();
+	ui.addListWidget->hide();
+	ui.label->setPixmap(QPixmap("Resources/searchbg.png"));
 	loadWeibo();
 	loadZhihu();
 	loadDongman();
 	loadNovel();
-	/*for (int i = 0; i <= 80; i++) {
-		QLabel *label = new QLabel();
-		QListWidgetItem *item = new QListWidgetItem();
-		label->setText("test");
-		ui.listWidget->addItem(item);
-		ui.listWidget->setItemWidget(item, label);
-	}*/
+	loadShipin();
+
+	//加载add页面
+	AddWindow *addWindow = new AddWindow();
+	QListWidgetItem *item = new QListWidgetItem();
+	item->setSizeHint(QSize(950, 720));
+	ui.addListWidget->addItem(item);
+	ui.addListWidget->setItemWidget(item, addWindow);
 }
 
 void SearchWindow::loadDongman()
 {
-	QString url("http://haojie06.me:9999/get?followmedia,id=4");
+	QString url("http://haojie06.me:9999/get?followmedia,id=3");
 	parseDongmanData(getData(url));
 }
 
 void SearchWindow::loadNovel()
 {
-	QString url("http://haojie06.me:9999/get?followmedia,id=4");
+	QString url("http://haojie06.me:9999/get?followmedia,id=3");
 	parseNovelData(getData(url));
 }
 
 void SearchWindow::loadShipin()
 {
-
+	QString url("http://haojie06.me:9999/get?followmedia,id=3");
+	parseShipinData(getData(url));
 }
 
 void SearchWindow::loadZhihu()
 {
-	QString url("http://haojie06.me:9999/get?zhihu,id=4");
+	QString url("http://haojie06.me:9999/get?zhihu,id=3");
 	parseZhihuData(getData(url));
 }
 
 void SearchWindow::loadWeibo()
 {
-	QString url("http://haojie06.me:9999/get?sinablog,id=4");
+	QString url("http://haojie06.me:9999/get?sinablog,id=3");
 	parseWeiboData(getData(url));
 }
 
@@ -163,6 +167,19 @@ void SearchWindow::addDongmanItem(QString webUrl,QString iamgeUrl, QString name,
 	mediaItem->setBackground(QPixmap("Resources/dongmanbg.png"));
 	mediaItem->setWindow(parentWidget());
 }
+
+void SearchWindow::addShipinItem(QString webUrl, QString iamgeUrl, QString name, QString author, QString description, QString updateTitle)
+{
+	MediaItem *mediaItem = new MediaItem();
+	QListWidgetItem *item = new QListWidgetItem();
+	item->setSizeHint(QSize(950, 360));
+	ui.shipinListWidget->addItem(item);
+	ui.shipinListWidget->setItemWidget(item, mediaItem);
+	mediaItem->setData(webUrl, iamgeUrl, name, author, description, updateTitle);
+	mediaItem->setBackground(QPixmap("Resources/shipinbg.png"));
+	mediaItem->setWindow(parentWidget());
+}
+
 void SearchWindow::addNovelItem(QString webUrl,QString iamgeUrl, QString name, QString author, QString description, QString updateTitle)
 {
 	MediaItem *mediaItem = new MediaItem();
@@ -236,7 +253,25 @@ void SearchWindow::parseDongmanData(QString data)
 }
 void SearchWindow::parseShipinData(QString data)
 {
-
+	int flag;
+	flag = data.indexOf(QStringLiteral("腾讯视频"));
+	while (flag != -1) {
+		int l, r;
+		l = data.indexOf("$$", flag) + 2;
+		r = data.indexOf("$$", l);
+		QString name = data.mid(l, r - l);
+		l = r + 2;
+		r = data.indexOf("$$", l);
+		QString imageUrl = data.mid(l, r - l);
+		l = r + 2;
+		r = data.indexOf("$$", l);
+		QString webUrl = data.mid(l, r - l);
+		l = data.indexOf("$$", r + 2) + 2;
+		r = data.indexOf("$$", l);
+		QString updateTitle = data.mid(l, r - l);
+		addShipinItem(webUrl, imageUrl, name, "", "", updateTitle);
+		flag = data.indexOf(QStringLiteral("腾讯视频"), r);
+	}
 }
 void SearchWindow::parseNovelData(QString data)
 {
@@ -266,6 +301,18 @@ void SearchWindow::parseNovelData(QString data)
 		addNovelItem(webUrl, imageUrl, name, author, description, updateTitle);
 		flag = data.indexOf(QStringLiteral("起点中文网"), r);
 	}
+}
+
+void SearchWindow::hideAll()
+{
+	lastPage->hide();
+}
+
+void SearchWindow::showAdd()
+{
+	lastPage->hide();
+	lastPage = ui.addListWidget;
+	ui.addListWidget->show();
 }
 
 void SearchWindow::showWeibo()

@@ -13,13 +13,16 @@
   <property name="windowTitle">
    <string>SearchWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QListWidget" name="weiboListWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>961</width>
-     <height>3061</height>
+     <height>3600</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -32,7 +35,7 @@
      <x>0</x>
      <y>0</y>
      <width>961</width>
-     <height>3061</height>
+     <height>3600</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -45,7 +48,7 @@
      <x>0</x>
      <y>0</y>
      <width>961</width>
-     <height>3000</height>
+     <height>3600</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -58,7 +61,7 @@
      <x>0</x>
      <y>0</y>
      <width>961</width>
-     <height>3000</height>
+     <height>3600</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -78,6 +81,39 @@
     <string notr="true"/>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>720</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="addListWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>961</width>
+     <height>3600</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>dongmanListWidget</zorder>
+  <zorder>qidianListWidget</zorder>
+  <zorder>shipinListWidget</zorder>
+  <zorder>weiboListWidget</zorder>
+  <zorder>zhihuListWidget</zorder>
+  <zorder>addListWidget</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
